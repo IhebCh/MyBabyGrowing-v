@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/week39" />
+
+    <RelativeLayout
+        android:id="@id/topLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/phone_top_bar_height"
+        android:layout_alignParentTop="true"
+        android:background="#ffff87a9">
+
+        <Button
+            android:id="@id/topInfoBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/phone_top_left_btn_mrgn_left"
+            android:text="@string/i_btn"
+            android:textSize="28sp"
+            android:textColor="#FFFFFF"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/headingTitle"
+            android:layout_width="@dimen/phone_heading_width_big"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/babyScreenTitle"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/heading_phone" />
+
+    </RelativeLayout>
+
+    <TableLayout
+        android:id="@id/secondLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottomLayout"
+        android:layout_below="@id/topLayout"
+        android:layout_centerVertical="true"
+        android:padding="5.0dip"
+        android:stretchColumns="0,1">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:layout_weight="1.0">
+
+            <RelativeLayout
+                android:id="@id/dailyLayout"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/rounded"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/dailyIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/daily_icon" />
+
+                <TextView
+                    android:id="@id/dailyTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/dailyTitle"
+                    android:textColor="#ff5dcbda"
+                    android:textSize="16.0sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/weeklyLayout"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/rounded"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/weeklyIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/weekly_icon" />
+
+                <TextView
+                    android:id="@id/weeklyTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/weeklyTitle"
+                    android:textColor="#ff5dcbda"
+                    android:textSize="16.0sp" />
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:layout_weight="1.0">
+
+            <RelativeLayout
+                android:id="@+id/imagesLayout"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/rounded"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/imagesIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/images_icon" />
+
+                <TextView
+                    android:id="@id/imagesTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/imagesTitle"
+                    android:textColor="#ff5dcbda"
+                    android:textSize="16.0sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/sizeLayout"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/rounded"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/sizeIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/size_icon" />
+
+                <TextView
+                    android:id="@id/sizeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sizeTitle"
+                    android:textColor="#ff5dcbda"
+                    android:textSize="16.0sp" />
+            </RelativeLayout>
+        </TableRow>
+
+    </TableLayout>
+
+    <RelativeLayout
+        android:id="@id/bottomLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="12.0dip"
+            android:layout_weight="0.0"
+            android:background="@drawable/square"
+            android:orientation="horizontal"
+            android:showDividers="end"
+            android:tabStripEnabled="false"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg3" />
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/phone_top_bar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/top_bar_background">
+
+        <Button
+            android:id="@+id/topInfoBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/phone_top_left_btn_mrgn_left"
+         android:text="@string/i_btn"
+            android:textSize="28sp"
+            android:textColor="#FFFFFF"
+            android:background="@android:color/transparent"/>
+
+        <TextView
+            android:id="@+id/topHeading"
+            android:layout_width="@dimen/phone_heading_width_big"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+
+            android:singleLine="true"
+            android:text="@string/meScreenTitle"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/heading_phone" />
+
+        <!--<Button
+            android:id="@id/unlockBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/phone_top_right_btn_mrgn_right"
+            android:background="@drawable/unlocked" />-->
+    </RelativeLayout>
+
+    <TableLayout
+        android:id="@id/secondLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottomLayout"
+        android:layout_below="@id/topLayout"
+        android:layout_centerVertical="true"
+        android:padding="5.0dip"
+        android:stretchColumns="0,1">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:layout_weight="1.0">
+
+            <RelativeLayout
+                android:id="@id/guideLayout"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/rounded"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/guideIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/guide_icon" />
+
+                <TextView
+                    android:id="@id/guideTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/guideTitle"
+                    android:textColor="#ff5dcbda"
+                    android:textSize="16.0sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/myWeightLayout"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/rounded"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/myWeightIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/myweight_icon" />
+
+                <TextView
+                    android:id="@id/myWeightTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/myWeightTitle"
+                    android:textColor="#ff5dcbda"
+                    android:textSize="16.0sp" />
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:layout_weight="1.0">
+
+            <RelativeLayout
+                android:id="@+id/appointmentsLayout"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/rounded"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/appointmentsIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/appointment_icon" />
+
+                <TextView
+                    android:id="@id/appointmentsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/apptTitle"
+                    android:textColor="#ff5dcbda"
+                    android:textSize="16.0sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/toDoLayout"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20.0dip"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/rounded"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/toDoIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/todo_icon" />
+
+                <TextView
+                    android:id="@id/toDoTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/toDoTitle"
+                    android:textColor="#ff5dcbda"
+                    android:textSize="16.0sp" />
+            </RelativeLayout>
+        </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+        android:id="@id/bottomLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TabWidget
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="12.0dip"
+            android:layout_weight="0.0"
+            android:background="@drawable/square"
+            android:orientation="horizontal"
+            android:showDividers="end"
+            android:tabStripEnabled="false"
+            android:visibility="invisible"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

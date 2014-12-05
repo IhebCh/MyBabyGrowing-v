@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="babygenders">
+        <item>@string/babygenderboy</item>
+        <item>@string/babygendergirl</item>
+        <item>@string/babygendertwins</item>
+        <item>@string/babygenderunknown</item>
+    </array>
+    <array name="relations">
+        <item>@string/relMother</item>
+        <item>@string/relfather</item>
+        <item>@string/relgrandparent</item>
+        <item>@string/reluncleoraunt</item>
+        <item>@string/relpartner</item>
+        <item>@string/relfriend</item>
+    </array>
+    <array name="shareOptions">
+        <item>@string/shareEmail</item>
+        <item>@string/shareFacebook</item>
+    </array>
+    <array name="weekSelection">
+        <item>@string/completed</item>
+        <item>@string/current</item>
+    </array>
+    <array name="photoAttachOptions">
+        <item>@string/chooseExisting</item>
+        <item>@string/takePhoto</item>
+        <item>@string/removePhoto</item>
+    </array>
+    <array name="myBellyPhotoAttachOptions">
+        <item>@string/library</item>
+        <item>@string/camera</item>
+        <item>@string/removePhoto</item>
+        <item>@string/backCancel</item>
+    </array>
+    <array name="categoryNames">
+        <item>@string/babyCare</item>
+        <item>@string/bottleFeeding</item>
+        <item>@string/breastFeeding</item>
+        <item>@string/changing</item>
+        <item>@string/clothing</item>
+        <item>@string/furniture</item>
+        <item>@string/safety</item>
+        <item>@string/sleeping</item>
+        <item>@string/toys</item>
+        <item>@string/travel</item>
+        <item>@string/other</item>
+    </array>
+    <array name="deleteOption">
+        <item>@string/delete</item>
+    </array>
+    <array name="professionNames">
+        <item>@string/anesthetist</item>
+        <item>@string/consultant</item>
+        <item>@string/dietician</item>
+        <item>@string/doctor</item>
+        <item>@string/doula</item>
+        <item>@string/healthVistor</item>
+        <item>@string/hospital</item>
+        <item>@string/midWife</item>
+        <item>@string/nurse</item>
+        <item>@string/obstetrician</item>
+        <item>@string/other</item>
+        <item>@string/pediatrician</item>
+        <item>@string/physiotherapist</item>
+        <item>@string/monographer</item>
+    </array>
+    <array name="birthPlanCategories">
+        <item>@string/environment</item>
+        <item>@string/companions</item>
+        <item>@string/fetalMonitoring</item>
+        <item>@string/photosAndVideos</item>
+        <item>@string/induction</item>
+        <item>@string/painRelief</item>
+        <item>@string/tearingAndEpisiotomy</item>
+        <item>@string/duringLabor</item>
+        <item>@string/cesareanBirth</item>
+        <item>@string/delivery</item>
+        <item>@string/birthingEquipment</item>
+        <item>@string/afterDelivery</item>
+        <item>@string/umbilicalCord</item>
+        <item>@string/feeding</item>
+        <item>@string/other</item>
+    </array>
+    <array name="hospitalBagCategories">
+        <item>@string/mothersBag</item>
+        <item>@string/partnersBag</item>
+        <item>@string/babysBag</item>
+    </array>
+</resources>

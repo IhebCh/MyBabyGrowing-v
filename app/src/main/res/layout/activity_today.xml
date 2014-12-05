@@ -1,0 +1,1128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@id/backImage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/week1"/>
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/phone_top_bar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/top_bar_background">
+
+        <Button
+            android:id="@+id/topInfoBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/phone_top_left_btn_mrgn_left"
+            android:background="@android:color/transparent"
+            android:textColor="#ffffff"
+            android:text="@string/i_btn"
+            android:textSize="26sp"
+            android:maxHeight="20dp"
+            android:maxWidth="30dp"
+            android:minWidth="30dp" />
+
+        <TextView
+            android:id="@id/headingTitle"
+            android:layout_width="@dimen/phone_heading_width_other"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/todayScreenTitle"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/heading_phone" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@id/scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topLayout">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/firstlayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:background="@android:color/transparent">
+
+                <ImageView
+                    android:id="@id/backImg"
+                    android:layout_width="94.0dip"
+                    android:layout_height="94.0dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:src="@drawable/blackframe" />
+
+                <ImageView
+                    android:id="@+id/userImage"
+                    android:layout_width="82.0dip"
+                    android:layout_height="82.0dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="16.0dip"
+                    android:layout_marginTop="6.0dip"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@id/topTodayText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/backImg"
+                    android:text="@string/todayText"
+                    android:padding="5.0dip"
+                    android:textColor="#ff5a5a5a"
+                    android:textSize="18.0sp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/blankView"
+                android:layout_width="fill_parent"
+                android:layout_height="175.0dip"
+                android:layout_below="@id/firstlayout"
+                android:background="@android:color/transparent" />
+
+            <RelativeLayout
+                android:id="@id/secondLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/blankView"
+                android:background="@android:color/transparent">
+
+                <RelativeLayout
+                    android:id="@+id/dayscountLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15.0dip"
+                    android:paddingRight="15.0dip">
+
+                    <TextView
+                        android:id="@+id/dayText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/daysCount"
+                        android:layout_toRightOf="@id/daysCount"
+                        android:paddingLeft="2.0dip"
+                        android:text="@string/days"
+                        android:textColor="#ff5a5a5a"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@id/weekText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/weekCount"
+                        android:layout_toLeftOf="@id/weekCount"
+                        android:paddingLeft="2.0dip"
+                        android:text="@string/week"
+                        android:textColor="#ff5a5a5a"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/weekCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="bottom"
+                        android:paddingLeft="2.0dip"
+                        android:text="1"
+                        android:textColor="#ff5a5a5a"
+                        android:textSize="36.0sp" />
+
+                    <TextView
+                        android:id="@+id/daysCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom|left|center"
+                        android:paddingLeft="5.0dip"
+                        android:text="1"
+                        android:textColor="#ff5a5a5a"
+                        android:textSize="36.0sp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toLeftOf="@+id/daysCount"
+                        android:layout_toStartOf="@+id/daysCount" />
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@id/trimesterprogressbar"
+                    style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="5.0dip"
+                    android:layout_below="@id/dayscountLayout"
+                    android:layout_centerVertical="true"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:progress="10"
+                    android:progressDrawable="@drawable/progressbarstyle_blue" />
+
+                <TextView
+                    android:id="@id/trimesterText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/trimesterprogressbar"
+                    android:paddingLeft="15.0dip"
+                    android:text="التلاثي الأول"
+                    android:textColor="#ff5a5a5a"
+                    android:textSize="14.0sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@id/englishLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secondLayout">
+
+                <RelativeLayout
+                    android:id="@id/thirdLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/secondLayout"
+                    android:background="@drawable/square"
+                    android:padding="5.0dip">
+
+                    <ImageView
+                        android:id="@id/third_imgid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5.0dip"
+                        android:src="@drawable/today_rss" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5.0dip"
+                        android:layout_toLeftOf="@id/disclosuretriangle"
+                        android:layout_toRightOf="@id/third_imgid">
+
+                        <TextView
+                            android:id="@id/blogtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="#ff5a5a5a"
+                            android:textSize="16.0sp" />
+
+                        <TextView
+                            android:id="@id/blogdesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/blogtitle"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="@string/readDailyBlog"
+                            android:textColor="#ff5dcbda"
+                            android:textSize="14.0sp" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@id/disclosuretriangle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/discloure" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@id/forthLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/englishLayout"
+                android:background="@drawable/square"
+                android:padding="5.0dip">
+
+                <TextView
+                    android:id="@id/fourth_imgid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/week"
+                    android:gravity="center"
+                    android:text="Jan \n03"
+                    android:textColor="#ffffffff"
+                    android:textSize="12.0sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:layout_toLeftOf="@id/disclosuretriangle"
+                    android:layout_toRightOf="@id/fourth_imgid">
+
+                    <TextView
+                        android:id="@id/dueDate_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:text="Due date: Jan 3, 2015"
+                        android:textColor="#ff5a5a5a"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@id/duedatedesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dueDate_title"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="33 weeks and 5 days left."
+                        android:textColor="#ff5dcbda"
+                        android:textSize="14.0sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@id/disclosuretriangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/discloure" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/fifthLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/forthLayout"
+                android:background="@drawable/square"
+                android:padding="5.0dip">
+
+                <TextView
+                    android:id="@id/fifth_imgid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/week"
+                    android:gravity="center"
+                    android:text="Day \n44"
+                    android:textColor="#ffffffff"
+                    android:textSize="12.0sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:layout_toLeftOf="@id/disclosuretriangle"
+                    android:layout_toRightOf="@id/fifth_imgid">
+
+                    <TextView
+                        android:id="@id/dayInfo_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="I'm so tired. With everything"
+                        android:textColor="#ff5a5a5a"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@id/dayInfodesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dayInfo_title"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="See daily info page"
+                        android:textColor="#ff5dcbda"
+                        android:textSize="14.0sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@id/disclosuretriangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/discloure" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/sixthLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fifthLayout"
+                android:background="@drawable/square"
+                android:padding="5.0dip">
+
+                <TextView
+                    android:id="@id/sixth_imgid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/week"
+                    android:gravity="center"
+                    android:text="Week\n6"
+                    android:textColor="#ffffffff"
+                    android:textSize="12.0sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:layout_toLeftOf="@id/disclosuretriangle"
+                    android:layout_toRightOf="@id/sixth_imgid">
+
+                    <TextView
+                        android:id="@id/weekInfo_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="The first six weeks of pregnancy"
+                        android:textColor="#ff5a5a5a"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@id/weekdesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/weekInfo_title"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="Read about week 6"
+                        android:textColor="#ff5dcbda"
+                        android:textSize="14.0sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@id/disclosuretriangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/discloure" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@id/nonEnglishLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sixthLayout"
+                android:orientation="vertical"/>
+
+            <RelativeLayout
+                android:id="@id/seventhLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nonEnglishLayout"
+                android:background="@drawable/square"
+                android:padding="5.0dip">
+
+                <ImageView
+                    android:id="@id/seventh_imgid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/week" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:layout_toLeftOf="@id/disclosuretriangle"
+                    android:layout_toRightOf="@id/seventh_imgid">
+
+                    <TextView
+                        android:id="@id/week_img_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="#ff5a5a5a"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@id/week_img_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/week_img_title"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="#ff5dcbda"
+                        android:textSize="14.0sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@id/disclosuretriangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/discloure" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/eighthLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seventhLayout"
+                android:background="@drawable/square"
+                android:padding="5.0dip">
+
+                <ImageView
+                    android:id="@id/eighth_imgid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:gravity="center"
+                    android:src="@drawable/week"
+                    android:textColor="#ffffffff" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:layout_toLeftOf="@id/disclosuretriangle"
+                    android:layout_toRightOf="@id/eighth_imgid">
+
+                    <TextView
+                        android:id="@id/babysize_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="Baby size guide: Grain of rice"
+                        android:textColor="#ff5a5a5a"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@id/babysize_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/babysize_title"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="0.01 oz and 0.30 in"
+                        android:textColor="#ff5dcbda"
+                        android:textSize="14.0sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@id/disclosuretriangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/discloure" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/ninethLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eighthLayout"
+                android:background="@drawable/square"
+                android:padding="5.0dip">
+
+                <ImageView
+                    android:id="@id/nineth_imgid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:gravity="center"
+                    android:src="@drawable/today_myweight"
+                    android:textColor="#ffffffff" />
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:layout_toLeftOf="@id/disclosuretriangle"
+                    android:layout_toRightOf="@id/nineth_imgid"
+                    android:stretchColumns="*">
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:id="@id/weightFirst"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5">
+
+                            <TextView
+                                android:id="@id/myweight_title1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="My weight"
+                                android:textColor="#ff5a5a5a"
+                                android:textSize="16.0sp" />
+
+                            <TextView
+                                android:id="@id/myweight_desc1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/myweight_title1"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="Enter your weight"
+                                android:textColor="#ff5dcbda"
+                                android:textSize="14.0sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@id/weightSecond"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@id/myweight_title2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="My weight"
+                                android:textColor="#ff5a5a5a"
+                                android:textSize="16.0sp" />
+
+                            <TextView
+                                android:id="@id/myweight_desc2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/myweight_title2"
+                                android:drawablePadding="15.0dip"
+                                android:drawableRight="@drawable/up_arrow_blue"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="Enter your weight"
+                                android:textColor="#ff5dcbda"
+                                android:textSize="14.0sp" />
+                        </RelativeLayout>
+                    </TableRow>
+                </TableLayout>
+
+                <ImageView
+                    android:id="@id/disclosuretriangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/discloure" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/tenthLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ninethLayout"
+                android:background="@drawable/square"
+                android:padding="5.0dip">
+
+                <TextView
+                    android:id="@id/tenth_imgid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/today_appointment"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#ffffffff"
+                    android:textSize="12.0sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:layout_toLeftOf="@id/disclosuretriangle"
+                    android:layout_toRightOf="@id/tenth_imgid">
+
+                    <TextView
+                        android:id="@id/appt_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="Appointment"
+                        android:textColor="#ff5a5a5a"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@id/appt_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/appt_title"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="Enter your next appointment"
+                        android:textColor="#ff5dcbda"
+                        android:textSize="14.0sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@id/disclosuretriangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/discloure" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/eleventhLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tenthLayout"
+                android:background="@drawable/square"
+                android:padding="5.0dip">
+
+                <ImageView
+                    android:id="@id/eleventh_imgid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:gravity="center"
+                    android:src="@drawable/today_todo"
+                    android:textColor="#ffffffff" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:layout_toLeftOf="@id/disclosuretriangle"
+                    android:layout_toRightOf="@id/eleventh_imgid">
+
+                    <TextView
+                        android:id="@id/todo_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="No tasks selected"
+                        android:textColor="#ff5a5a5a"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@id/todo_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/todo_title"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="Select things to do here"
+                        android:textColor="#ff5dcbda"
+                        android:textSize="14.0sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@id/disclosuretriangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/discloure" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/twelvethLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eleventhLayout"
+                android:background="@drawable/square"
+                android:padding="5.0dip">
+
+                <ImageView
+                    android:id="@id/twelveth_imgid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:src="@drawable/week" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:layout_toLeftOf="@id/disclosuretriangle"
+                    android:layout_toRightOf="@id/twelveth_imgid">
+
+                    <TextView
+                        android:id="@id/month_wise_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="Month 2 of pregnancy"
+                        android:textColor="#ff5a5a5a"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@id/month_wise_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/month_wise_title"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="33 weeks and 5 days left."
+                        android:textColor="#ff5dcbda"
+                        android:textSize="14.0sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@id/disclosuretriangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/discloure" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/thirteenthLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/twelvethLayout"
+                android:background="@drawable/square"
+                android:padding="5.0dip">
+
+                <ImageView
+                    android:id="@id/thirteenth_imgid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:gravity="center"
+                    android:src="@drawable/today_babynames"
+                    android:textColor="#ffffffff" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:layout_toLeftOf="@id/disclosuretriangle"
+                    android:layout_toRightOf="@id/thirteenth_imgid">
+
+                    <LinearLayout
+                        android:id="@id/babyLinear"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@id/babyBoynames_title"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="@string/allBoysNames"
+                            android:textColor="#ff5a5a5a"
+                            android:textSize="16.0sp" />
+
+                        <TextView
+                            android:id="@id/babyGirlnames_title"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:layout_weight="1.0"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="@string/allGirlsNames"
+                            android:textColor="#ff5a5a5a"
+                            android:textSize="16.0sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@id/babyLinearSecond"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/babyLinear"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@id/babyNames_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="@string/selectYourNamesHere"
+                            android:textColor="#ff5dcbda"
+                            android:textSize="14.0sp" />
+
+                        <TextView
+                            android:id="@id/babyBoyFavNames_title"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="abc"
+                            android:textColor="#ff5dcbda"
+                            android:textSize="14.0sp" />
+
+                        <TextView
+                            android:id="@id/babyGirlFavNames_title"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="abc"
+                            android:textColor="#ff5dcbda"
+                            android:textSize="14.0sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@id/disclosuretriangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/discloure" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/forteenthLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/thirteenthLayout"
+                android:background="@drawable/square"
+                android:padding="5.0dip">
+
+                <ImageView
+                    android:id="@id/forteenth_imgid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:gravity="center"
+                    android:src="@drawable/today_shopping"
+                    android:textColor="#ffffffff" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:layout_toLeftOf="@id/disclosuretriangle"
+                    android:layout_toRightOf="@id/forteenth_imgid">
+
+                    <TextView
+                        android:id="@id/shopping_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="#ff5a5a5a"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@id/shopping_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/shopping_title"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="#ff5dcbda"
+                        android:textSize="14.0sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@id/disclosuretriangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/discloure" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/fifteenthLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/forteenthLayout"
+                android:background="@drawable/square"
+                android:padding="5.0dip">
+
+                <ImageView
+                    android:id="@id/fifteenth_imgid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:gravity="center"
+                    android:src="@drawable/today_phone"
+                    android:textColor="#ffffffff" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:layout_toLeftOf="@id/disclosuretriangle"
+                    android:layout_toRightOf="@id/fifteenth_imgid">
+
+                    <TextView
+                        android:id="@id/contacts_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/importantPhoneNumbers"
+                        android:textColor="#ff5a5a5a"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@id/contacts_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/contacts_title"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/selectNumbersHere"
+                        android:textColor="#ff5dcbda"
+                        android:textSize="14.0sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@id/disclosuretriangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/discloure" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/sixteenthLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fifteenthLayout"
+                android:background="@drawable/square"
+                android:padding="5.0dip">
+
+                <ImageView
+                    android:id="@id/sixteenth_imgid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:gravity="center"
+                    android:src="@drawable/today_aboutus"
+                    android:textColor="#ffffffff" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:layout_toLeftOf="@id/disclosuretriangle"
+                    android:layout_toRightOf="@id/sixteenth_imgid">
+
+                    <TextView
+                        android:id="@id/aboutus_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/aboutUsAndMore"
+                        android:textColor="#ff5a5a5a"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@id/aboutus_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/aboutus_title"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/faqRateAppOtherApps"
+                        android:textColor="#ff5dcbda"
+                        android:textSize="14.0sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@id/disclosuretriangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/discloure" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/seventeenthLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sixteenthLayout">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="12.0dip"
+                    android:layout_weight="0.0"
+                    android:background="@drawable/square"
+                    android:orientation="horizontal"
+                    android:showDividers="end"
+                    android:tabStripEnabled="false"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

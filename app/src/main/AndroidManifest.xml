@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="co.hygitech.mybabygrowing" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="co.hygitech.mybabygrowing.Splash"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="co.hygitech.mybabygrowing.Login"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.hygitech.mybabygrowing.Baby"
+            android:label="@string/title_activity_baby" >
+        </activity>
+        <activity
+            android:name="co.hygitech.mybabygrowing.Mere"
+            android:label="@string/title_activity_mere" >
+        </activity>
+        <activity
+            android:name="co.hygitech.mybabygrowing.Today"
+            android:label="@string/title_activity_today" >
+        </activity>
+        <activity
+            android:name="co.hygitech.mybabygrowing.Enregistrer"
+            android:label="@string/title_activity_enregistrer" >
+        </activity>
+        <activity
+            android:name="co.hygitech.mybabygrowing.Plus"
+            android:label="@string/title_activity_plus" >
+        </activity>
+        <activity
+            android:name="co.hygitech.mybabygrowing.To_do"
+            android:label="@string/title_activity_to_do" >
+        </activity>
+    </application>
+
+</manifest>
