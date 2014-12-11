@@ -527,8 +527,8 @@ The team of Health &amp; Parenting wish you a healthy and full-term pregnancy an
     <string name="toTake">To take</string>
     <string name="myHospitalBag">My hospital bag</string>
     <string name="myShortList">My short list</string>
-    <string name="aboutUsAndMore">About us and more</string>
-    <string name="faqRateAppOtherApps">FAQs, rate App, other Apps</string>
+    <string name="aboutUsAndMore">عنا وأكثر</string>
+    <string name="faqRateAppOtherApps">التعليمات .</string>
     <string name="importantPhoneNumbers">أرقام هاتفية مفيدة</string>
     <string name="selectNumbersHere">إختاري رقمك هنا</string>
     <string name="contractionScreenTitle">Contraction</string>
@@ -701,7 +701,7 @@ Please tell us what you don't like about the App, so we can help."</string>
     <string name="txtNoColleagueFound">No Colleagues found</string>
     <string name="capsSkip">SKIP</string>
     <string name="confirmResetPassword">Are you sure you want to reset your password?</string>
-    <string name="selectYourNamesHere">Select your names here</string>
+    <string name="selectYourNamesHere">إختاري أسماءك هنا</string>
     <string name="fbPostMsg">Download the FREE Pregnancy App from Health &amp; Parenting or read our Daily Pregnancy Blog which provides you with lots of Pregnancy tips and info</string>
     <string name="americanNames">American names</string>
     <string name="arabicNames">Arabic names</string>
@@ -748,5 +748,6 @@ Please tell us what you don't like about the App, so we can help."</string>
     <string name="title_activity_to_do">To_do</string>
     <string name="first_to_do">ما يجب أن أقوم به 1</string>
     <string name="second_to_do">ما يجب أن أقوم به 2</string>
+    <string name="title_activity_tab_host">TabHost</string>
 
 </resources>

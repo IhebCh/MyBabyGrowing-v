@@ -266,7 +266,7 @@
                     android:layout_margin="5.0dip"
                     android:background="@drawable/week"
                     android:gravity="center"
-                    android:text="Jan \n03"
+                    android:text="جانفي \n03"
                     android:textColor="#ffffffff"
                     android:textSize="12.0sp" />
 
@@ -283,7 +283,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
-                        android:text="Due date: Jan 3, 2015"
+                        android:text="تاريخ الحمل 15/12/2014"
                         android:textColor="#ff5a5a5a"
                         android:textSize="16.0sp" />
 
@@ -294,7 +294,7 @@
                         android:layout_below="@id/dueDate_title"
                         android:ellipsize="end"
                         android:singleLine="true"
-                        android:text="33 weeks and 5 days left."
+                        android:text="33 أسبوعا و خمست أيام تبقت"
                         android:textColor="#ff5dcbda"
                         android:textSize="14.0sp" />
                 </RelativeLayout>
@@ -325,7 +325,7 @@
                     android:layout_margin="5.0dip"
                     android:background="@drawable/week"
                     android:gravity="center"
-                    android:text="Day \n44"
+                    android:text="اليوم \n44"
                     android:textColor="#ffffffff"
                     android:textSize="12.0sp" />
 
@@ -343,7 +343,7 @@
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:singleLine="true"
-                        android:text="I'm so tired. With everything"
+                        android:text="أنا مرهقة جدا .من كل شيء"
                         android:textColor="#ff5a5a5a"
                         android:textSize="16.0sp" />
 
@@ -354,7 +354,7 @@
                         android:layout_below="@id/dayInfo_title"
                         android:ellipsize="end"
                         android:singleLine="true"
-                        android:text="See daily info page"
+                        android:text="راجع معلومات الصفحة اليومية"
                         android:textColor="#ff5dcbda"
                         android:textSize="14.0sp" />
                 </RelativeLayout>
@@ -385,7 +385,7 @@
                     android:layout_margin="5.0dip"
                     android:background="@drawable/week"
                     android:gravity="center"
-                    android:text="Week\n6"
+                    android:text="الأسبوع\n6"
                     android:textColor="#ffffffff"
                     android:textSize="12.0sp" />
 
@@ -403,7 +403,7 @@
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:singleLine="true"
-                        android:text="The first six weeks of pregnancy"
+                        android:text="الست أسابيع الأولى من الحمل"
                         android:textColor="#ff5a5a5a"
                         android:textSize="16.0sp" />
 
@@ -414,7 +414,7 @@
                         android:layout_below="@id/weekInfo_title"
                         android:ellipsize="end"
                         android:singleLine="true"
-                        android:text="Read about week 6"
+                        android:text="إقرئي أكثر عن الأسبوع 6"
                         android:textColor="#ff5dcbda"
                         android:textSize="14.0sp" />
                 </RelativeLayout>
@@ -523,7 +523,7 @@
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:singleLine="true"
-                        android:text="Baby size guide: Grain of rice"
+                        android:text="دليل حجم الطفل: حبة الأرز"
                         android:textColor="#ff5a5a5a"
                         android:textSize="16.0sp" />
 
@@ -534,7 +534,7 @@
                         android:layout_below="@id/babysize_title"
                         android:ellipsize="end"
                         android:singleLine="true"
-                        android:text="0.01 oz and 0.30 in"
+                        android:text="0.28 غرام و 0.3"
                         android:textColor="#ff5dcbda"
                         android:textSize="14.0sp" />
                 </RelativeLayout>
@@ -592,7 +592,7 @@
                                 android:layout_height="wrap_content"
                                 android:ellipsize="end"
                                 android:singleLine="true"
-                                android:text="My weight"
+                                android:text="وزني"
                                 android:textColor="#ff5a5a5a"
                                 android:textSize="16.0sp" />
 
@@ -603,7 +603,7 @@
                                 android:layout_below="@id/myweight_title1"
                                 android:ellipsize="end"
                                 android:singleLine="true"
-                                android:text="Enter your weight"
+                                android:text="أدخلي وزنكي"
                                 android:textColor="#ff5dcbda"
                                 android:textSize="14.0sp" />
                         </RelativeLayout>
@@ -621,7 +621,7 @@
                                 android:layout_height="wrap_content"
                                 android:ellipsize="end"
                                 android:singleLine="true"
-                                android:text="My weight"
+                                android:text="وزني"
                                 android:textColor="#ff5a5a5a"
                                 android:textSize="16.0sp" />
 
@@ -634,7 +634,7 @@
                                 android:drawableRight="@drawable/up_arrow_blue"
                                 android:ellipsize="end"
                                 android:singleLine="true"
-                                android:text="Enter your weight"
+                                android:text="أدخلي وزنكي"
                                 android:textColor="#ff5dcbda"
                                 android:textSize="14.0sp" />
                         </RelativeLayout>
@@ -685,7 +685,7 @@
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:singleLine="true"
-                        android:text="Appointment"
+                        android:text="مواعيد"
                         android:textColor="#ff5a5a5a"
                         android:textSize="16.0sp" />
 
@@ -696,7 +696,7 @@
                         android:layout_below="@id/appt_title"
                         android:ellipsize="end"
                         android:singleLine="true"
-                        android:text="Enter your next appointment"
+                        android:text="أدخلي مواعيدك"
                         android:textColor="#ff5dcbda"
                         android:textSize="14.0sp" />
                 </RelativeLayout>
@@ -743,7 +743,7 @@
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:singleLine="true"
-                        android:text="No tasks selected"
+                        android:text="لا توجد مهام محددة"
                         android:textColor="#ff5a5a5a"
                         android:textSize="16.0sp" />
 
@@ -754,7 +754,7 @@
                         android:layout_below="@id/todo_title"
                         android:ellipsize="end"
                         android:singleLine="true"
-                        android:text="Select things to do here"
+                        android:text="إختاري المهام للقيام بها هنا"
                         android:textColor="#ff5dcbda"
                         android:textSize="14.0sp" />
                 </RelativeLayout>
@@ -799,7 +799,7 @@
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:singleLine="true"
-                        android:text="Month 2 of pregnancy"
+                        android:text="الشهر الثاني من الحمل"
                         android:textColor="#ff5a5a5a"
                         android:textSize="16.0sp" />
 
@@ -810,7 +810,7 @@
                         android:layout_below="@id/month_wise_title"
                         android:ellipsize="end"
                         android:singleLine="true"
-                        android:text="33 weeks and 5 days left."
+                        android:text="33 أسبوعا و خمست أيام تبقت"
                         android:textColor="#ff5dcbda"
                         android:textSize="14.0sp" />
                 </RelativeLayout>
@@ -905,7 +905,7 @@
                             android:layout_weight="1.0"
                             android:ellipsize="end"
                             android:singleLine="true"
-                            android:text="abc"
+                            android:text="إسم ذكر"
                             android:textColor="#ff5dcbda"
                             android:textSize="14.0sp" />
 
@@ -916,7 +916,7 @@
                             android:layout_weight="1.0"
                             android:ellipsize="end"
                             android:singleLine="true"
-                            android:text="abc"
+                            android:text="إسم بنت"
                             android:textColor="#ff5dcbda"
                             android:textSize="14.0sp" />
                     </LinearLayout>
@@ -1120,7 +1120,7 @@
                     android:orientation="horizontal"
                     android:showDividers="end"
                     android:tabStripEnabled="false"
-                    android:visibility="invisible" />
+                    android:visibility="visible" />
             </RelativeLayout>
 
         </RelativeLayout>
