@@ -1,14 +1,12 @@
-package co.mybabygrowing;
+package co.hygitech.mybabygrowing;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import co.hygitech.mybabygrowing.R;
 
-
-public class Baby extends ActionBarActivity {
+public class Baby extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

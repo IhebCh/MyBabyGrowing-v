@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg3"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@id/topLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginBottom="40.0dip">
+
+        <TextView
+            android:id="@id/topHeading"
+            android:layout_width="@dimen/phone_heading_width_other"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/LoginSignup"
+            android:textColor="#ffffffff"
+            android:textSize="18.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/topLayout"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@id/secondLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/separator"
+            android:padding="10.0dip">
+
+            <Button
+                android:id="@+id/fbLinear"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="#ff035cb2"
+                android:drawablePadding="10.0dip"
+                android:gravity="left|center"
+                android:paddingBottom="8.0dip"
+                android:paddingLeft="65.0dip"
+                android:layout_marginTop="280dp"
+                android:paddingTop="8.0dip"
+                android:text="@string/capsSignUp_"
+                android:textColor="#ffffffff"
+                android:textSize="20.0sp"
+                android:onClick="signUp"/>
+
+            <Button
+                android:id="@id/twLinear"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:layout_weight="1.0"
+                android:background="#ff0196ee"
+                android:drawablePadding="10.0dip"
+                android:gravity="left|center"
+                android:paddingBottom="10.0dip"
+                android:paddingLeft="75.0dip"
+                android:layout_marginTop="280dp"
+                android:paddingTop="10.0dip"
+                android:text="@string/capsLogin_"
+                android:textColor="#ffffffff"
+                android:textSize="20.0sp"
+                android:onClick="logIn"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

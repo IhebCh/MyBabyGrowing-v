@@ -7,71 +7,58 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost;
+import android.widget.TabWidget;
 import android.widget.TextView;
-
-import co.mybabygrowing.Baby;
-import co.mybabygrowing.Mere;
-import co.mybabygrowing.Plus;
-import co.mybabygrowing.Today;
 
 public class TabsActivity extends TabActivity {
 
     TabHost tabHost;
+    TabWidget tabWidget;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        tabHost = getTabHost();
+      //  hideStatusBar();
+
+        setContentView(co.hygitech.mybabygrowing.R.layout.activity_tab_host);
+        tabHost = (TabHost) findViewById(android.R.id.tabhost);
+        tabWidget = (TabWidget) findViewById(android.R.id.tabs);
         setTabs();
-        //setContentView(R.layout.activity_main);
-        tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
-            @Override
-            public void onTabChanged(String arg0) {
-                 switch (tabHost.getCurrentTab()){
-                     case 0:
-                            setSelectedTab(R.drawable.today_selected_btn);
-                         break;
-                     case 1:
-                         break;
-                     case 2:
-                         break;
-                     case 3:
-                         break;
-                 }
-            }
-        });
+
     }
 
-    private void setTabs()
-    {
-        addTab("today", R.drawable.tab1_background, Today.class );
-        addTab("baby", R.drawable.tab2_background,Baby.class);
-        addTab("mom", R.drawable.tab3_background, Mere.class);
-        addTab("more", R.drawable.tab4_background, Plus.class);
+   /* private void hideStatusBar() {
+
+        View decorView = getWindow().getDecorView();
+// Hide the status bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+// Remember that you should never show the action bar if the
+// status bar is hidden, so hide that too if necessary.
+    //    ActionBar actionBar = getActionBar();
+      //  actionBar.hide();
+    }
+*/
+    private void setTabs() {
+        addTab("today", co.hygitech.mybabygrowing.R.drawable.tab1_background, Today.class);
+        addTab("baby", co.hygitech.mybabygrowing.R.drawable.tab2_background, Baby.class);
+        addTab("mom", co.hygitech.mybabygrowing.R.drawable.tab3_background, Mere.class);
+        addTab("more", co.hygitech.mybabygrowing.R.drawable.tab4_background, Plus.class);
         tabHost.setCurrentTab(0);
     }
 
-    private void addTab(String labelId, int drawableId, Class<?> c)
-    {
+    private void addTab(String labelId, int drawableId, Class<?> c) {
         Intent intent = new Intent(this, c);
         TabHost.TabSpec spec = tabHost.newTabSpec("tab" + labelId);
-        View tabIndicator = LayoutInflater.from(this).inflate(R.layout.tab_indicator, getTabWidget(), false);
-        TextView title = (TextView) tabIndicator.findViewById(R.id.title);
+        View tabIndicator = LayoutInflater.from(this).inflate(co.hygitech.mybabygrowing.R.layout.tab_indicator, tabWidget, false);
+        TextView title = (TextView) tabIndicator.findViewById(co.hygitech.mybabygrowing.R.id.title);
         title.setText(labelId);
-        ImageView icon = (ImageView) tabIndicator.findViewById(R.id.icon);
+        ImageView icon = (ImageView) tabIndicator.findViewById(co.hygitech.mybabygrowing.R.id.icon);
         icon.setImageResource(drawableId);
         spec.setIndicator(tabIndicator);
         spec.setContent(intent);
         tabHost.addTab(spec);
     }
 
-    private void setSelectedTab(/*String labelId,*/ int drawableId)
-    {
-        View tabIndicator = LayoutInflater.from(this).inflate(R.layout.tab_indicator, getTabWidget(), false);
-        TextView title = (TextView) tabIndicator.findViewById(R.id.title);
-      //  title.setText(labelId);
-        ImageView icon = (ImageView) tabIndicator.findViewById(R.id.icon);
-        icon.setImageResource(drawableId);
-    }
 
 }

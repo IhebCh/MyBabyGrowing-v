@@ -1,14 +1,11 @@
-package co.mybabygrowing;
+package co.hygitech.mybabygrowing;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-
-import co.hygitech.mybabygrowing.R;
-import co.hygitech.mybabygrowing.TabsActivity;
 
 
-public class Splash extends ActionBarActivity {
+public class Splash extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +19,7 @@ public class Splash extends ActionBarActivity {
                 }catch (InterruptedException e){
                     e.printStackTrace();
                 }finally {
-                    Intent main=new Intent(Splash.this , TabsActivity.class) ;
+                    Intent main=new Intent(Splash.this , ConnecterEnregistrer.class) ;
                    /* Intent main=new Intent("") ;*/
                     startActivity(main);
                 }

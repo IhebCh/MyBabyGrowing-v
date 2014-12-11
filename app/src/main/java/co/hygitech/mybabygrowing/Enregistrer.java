@@ -1,26 +1,26 @@
-package co.mybabygrowing;
+package co.hygitech.mybabygrowing;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-import co.hygitech.mybabygrowing.R;
 
-
-public class Login extends ActionBarActivity {
+public class Enregistrer extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_enregistrer);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_login, menu);
+        getMenuInflater().inflate(R.menu.menu_enregistrer, menu);
         return true;
     }
 
@@ -38,4 +38,9 @@ public class Login extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    public void next(View v){
+        Intent i=new Intent(Enregistrer.this,TabsActivity.class);
+        startActivity(i);
+    }
+
 }

@@ -108,7 +108,9 @@
                 android:paddingBottom="13.0dip"
                 android:paddingTop="13.0dip"
                 android:text="@string/capsLogin"
-                android:textColor="#ffffffff" />
+                android:textColor="#ffffffff"
+                android:onClick="logIn"
+                />
 
             <TextView
                 android:id="@id/tandc"

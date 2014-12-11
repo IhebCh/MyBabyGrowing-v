@@ -1,26 +1,26 @@
-package co.mybabygrowing;
+package co.hygitech.mybabygrowing;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-import co.hygitech.mybabygrowing.R;
 
-
-public class To_do extends ActionBarActivity {
+public class ConnecterEnregistrer extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_to_do);
+        setContentView(co.hygitech.mybabygrowing.R.layout.activity_connecter_enregistrer);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_to_do, menu);
+        getMenuInflater().inflate(co.hygitech.mybabygrowing.R.menu.menu_connecter_enregistrer, menu);
         return true;
     }
 
@@ -32,10 +32,21 @@ public class To_do extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == co.hygitech.mybabygrowing.R.id.action_settings) {
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void signUp(View v){
+        Intent i=new Intent(ConnecterEnregistrer.this,Enregistrer.class);
+        startActivity(i);
+    }
+
+    public void logIn(View v){
+        Intent i=new Intent(ConnecterEnregistrer.this,Login.class);
+        startActivity(i);
+    }
+
 }

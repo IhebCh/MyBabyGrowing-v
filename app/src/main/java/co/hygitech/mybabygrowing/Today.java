@@ -1,26 +1,35 @@
-package co.mybabygrowing;
+package co.hygitech.mybabygrowing;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import co.hygitech.mybabygrowing.R;
+import java.util.Locale;
 
 
-public class Enregistrer extends ActionBarActivity {
+public class Today extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_enregistrer);
+        String languageToLoad  = "ar"; // your language
+        Locale locale = new Locale(languageToLoad);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+
+        setContentView(R.layout.activity_today);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_enregistrer, menu);
+        getMenuInflater().inflate(R.menu.menu_today, menu);
         return true;
     }
 

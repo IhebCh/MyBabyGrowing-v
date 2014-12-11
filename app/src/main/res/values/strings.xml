@@ -152,10 +152,10 @@ Recommend this App"</string>
     <string name="TAB2_BABY">baby</string>
     <string name="TAB3_ME">me</string>
     <string name="TAB4_MORE">more</string>
-    <string name="setting">Settings</string>
-    <string name="phone">Phone</string>
-    <string name="baby_names">Baby names</string>
-    <string name="shopping">Shopping</string>
+    <string name="setting">الإعدادات</string>
+    <string name="phone">الهاتف</string>
+    <string name="baby_names">أسماء الرضيع</string>
+    <string name="shopping">التسوق</string>
     <string name="hospital_bag">Hospital Bag</string>
     <string name="contraction">Contractions</string>
     <string name="dailyTitle">يوميا</string>
@@ -668,7 +668,9 @@ Please tell us what you don't like about the App, so we can help."</string>
     <string name="scanImageEmailBody2">"To copy a photo: go to camera roll and tap and hold the photo you'd like to send."</string>
     <string name="scanImageEmailBody3">I hereby declare I own the attached image(s). By sending Health and Parenting Ltd. these image(s) I declare the image(s) are wholly owned by me, and I grant Health and Parenting Ltd a non-exclusive, fully paid and royalty-free, transferable, sub-licensable, worldwide licence to use my attached image(s).</string>
     <string name="capsSignUp">سجل</string>
+    <string name="capsSignUp_">تسجيل</string>
     <string name="capsLogin">تسجيل الدخول</string>
+    <string name="capsLogin_">دخول</string>
     <string name="password">كلمة المرور</string>
     <string name="verify">تحقق من</string>
     <string name="emailAddress">عنوان البريد الإلكتروني</string>
@@ -749,5 +751,7 @@ Please tell us what you don't like about the App, so we can help."</string>
     <string name="first_to_do">ما يجب أن أقوم به 1</string>
     <string name="second_to_do">ما يجب أن أقوم به 2</string>
     <string name="title_activity_tab_host">TabHost</string>
+    <string name="plusScreenTitle">المزيد</string>
+    <string name="LoginSignup">التسجيل أو الدخول</string>
 
 </resources>

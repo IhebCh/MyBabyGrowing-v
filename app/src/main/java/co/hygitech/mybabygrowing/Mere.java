@@ -1,31 +1,25 @@
-package co.mybabygrowing;
+package co.hygitech.mybabygrowing;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
-
-import co.hygitech.mybabygrowing.R;
 
 
-public class Plus extends ActionBarActivity {
+public class Mere extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        TextView more = (TextView)findViewById(R.id.topHeading);
-        setContentView(R.layout.activity_plus);
-
+        setContentView(R.layout.activity_mere);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_plus, menu);
+        getMenuInflater().inflate(R.menu.menu_mere, menu);
         return true;
-
     }
 
     @Override

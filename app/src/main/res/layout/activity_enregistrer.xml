@@ -40,7 +40,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="47dp" />
+        android:layout_marginBottom="47dp"
+        android:onClick="next"/>
 
     <TextView
         android:id="@id/topLoginBtn"
