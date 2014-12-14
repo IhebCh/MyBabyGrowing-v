@@ -130,7 +130,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignBaseline="@id/weekCount"
-                        android:layout_toLeftOf="@id/weekCount"
+                        android:layout_toRightOf="@id/weekCount"
                         android:paddingLeft="2.0dip"
                         android:text="@string/week"
                         android:textColor="#ff5a5a5a"
@@ -140,7 +140,7 @@
                         android:id="@+id/weekCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
+                        android:layout_alignParentLeft="true"
                         android:gravity="bottom"
                         android:paddingLeft="2.0dip"
                         android:text="1"
@@ -202,10 +202,19 @@
                     android:padding="5.0dip">
 
                     <ImageView
-                        android:id="@id/third_imgid"
+                        android:id="@id/disclosuretriangle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/discloure" />
+
+                    <ImageView
+
+                        android:id="@id/third_imgid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_margin="5.0dip"
                         android:src="@drawable/today_rss" />
@@ -215,8 +224,8 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_margin="5.0dip"
-                        android:layout_toLeftOf="@id/disclosuretriangle"
-                        android:layout_toRightOf="@id/third_imgid">
+                        android:layout_toRightOf="@id/disclosuretriangle"
+                        android:layout_toLeftOf="@id/third_imgid">
 
                         <TextView
                             android:id="@id/blogtitle"
@@ -233,19 +242,14 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/blogtitle"
                             android:ellipsize="end"
+                            android:layout_alignParentRight="true"
                             android:singleLine="true"
                             android:text="@string/readDailyBlog"
                             android:textColor="#ff5dcbda"
                             android:textSize="14.0sp" />
                     </RelativeLayout>
 
-                    <ImageView
-                        android:id="@id/disclosuretriangle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/discloure" />
+
                 </RelativeLayout>
             </LinearLayout>
 
@@ -261,7 +265,7 @@
                     android:id="@id/fourth_imgid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
                     android:background="@drawable/week"
@@ -275,14 +279,16 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
-                    android:layout_toLeftOf="@id/disclosuretriangle"
-                    android:layout_toRightOf="@id/fourth_imgid">
+                    android:layout_toRightOf="@id/disclosuretriangle"
+                    android:layout_toLeftOf="@id/fourth_imgid">
 
                     <TextView
                         android:id="@id/dueDate_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
+                        android:layout_alignParentRight="true"
+
                         android:text="تاريخ الحمل 15/12/2014"
                         android:textColor="#ff5a5a5a"
                         android:textSize="16.0sp" />
@@ -294,6 +300,8 @@
                         android:layout_below="@id/dueDate_title"
                         android:ellipsize="end"
                         android:singleLine="true"
+                        android:layout_alignParentRight="true"
+
                         android:text="33 أسبوعا و خمست أيام تبقت"
                         android:textColor="#ff5dcbda"
                         android:textSize="14.0sp" />
@@ -303,7 +311,7 @@
                     android:id="@id/disclosuretriangle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/discloure" />
             </RelativeLayout>
@@ -320,7 +328,7 @@
                     android:id="@id/fifth_imgid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
                     android:background="@drawable/week"
@@ -334,8 +342,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
-                    android:layout_toLeftOf="@id/disclosuretriangle"
-                    android:layout_toRightOf="@id/fifth_imgid">
+                    android:layout_toRightOf="@id/disclosuretriangle"
+                    android:layout_toLeftOf="@id/fifth_imgid">
 
                     <TextView
                         android:id="@id/dayInfo_title"
@@ -343,6 +351,8 @@
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:singleLine="true"
+                        android:layout_alignParentRight="true"
+
                         android:text="أنا مرهقة جدا .من كل شيء"
                         android:textColor="#ff5a5a5a"
                         android:textSize="16.0sp" />
@@ -355,6 +365,8 @@
                         android:ellipsize="end"
                         android:singleLine="true"
                         android:text="راجع معلومات الصفحة اليومية"
+                        android:layout_alignParentRight="true"
+
                         android:textColor="#ff5dcbda"
                         android:textSize="14.0sp" />
                 </RelativeLayout>
@@ -363,7 +375,7 @@
                     android:id="@id/disclosuretriangle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/discloure" />
             </RelativeLayout>
@@ -380,7 +392,7 @@
                     android:id="@id/sixth_imgid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
                     android:background="@drawable/week"
@@ -394,13 +406,15 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
-                    android:layout_toLeftOf="@id/disclosuretriangle"
-                    android:layout_toRightOf="@id/sixth_imgid">
+                    android:layout_toRightOf="@id/disclosuretriangle"
+                    android:layout_toLeftOf="@id/sixth_imgid">
 
                     <TextView
                         android:id="@id/weekInfo_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+
                         android:ellipsize="end"
                         android:singleLine="true"
                         android:text="الست أسابيع الأولى من الحمل"
@@ -411,6 +425,8 @@
                         android:id="@id/weekdesc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+
                         android:layout_below="@id/weekInfo_title"
                         android:ellipsize="end"
                         android:singleLine="true"
@@ -423,7 +439,7 @@
                     android:id="@id/disclosuretriangle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/discloure" />
             </RelativeLayout>
@@ -436,65 +452,10 @@
                 android:orientation="vertical"/>
 
             <RelativeLayout
-                android:id="@id/seventhLayout"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/nonEnglishLayout"
-                android:background="@drawable/square"
-                android:padding="5.0dip">
-
-                <ImageView
-                    android:id="@id/seventh_imgid"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:layout_margin="5.0dip"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/week" />
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_margin="5.0dip"
-                    android:layout_toLeftOf="@id/disclosuretriangle"
-                    android:layout_toRightOf="@id/seventh_imgid">
-
-                    <TextView
-                        android:id="@id/week_img_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:ellipsize="end"
-                        android:singleLine="true"
-                        android:textColor="#ff5a5a5a"
-                        android:textSize="16.0sp" />
-
-                    <TextView
-                        android:id="@id/week_img_desc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/week_img_title"
-                        android:ellipsize="end"
-                        android:singleLine="true"
-                        android:textColor="#ff5dcbda"
-                        android:textSize="14.0sp" />
-                </RelativeLayout>
-
-                <ImageView
-                    android:id="@id/disclosuretriangle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/discloure" />
-            </RelativeLayout>
-
-            <RelativeLayout
                 android:id="@id/eighthLayout"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/seventhLayout"
+                android:layout_below="@id/sixthLayout"
                 android:background="@drawable/square"
                 android:padding="5.0dip">
 
@@ -502,7 +463,7 @@
                     android:id="@id/eighth_imgid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
                     android:gravity="center"
@@ -514,8 +475,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
-                    android:layout_toLeftOf="@id/disclosuretriangle"
-                    android:layout_toRightOf="@id/eighth_imgid">
+                    android:layout_toRightOf="@id/disclosuretriangle"
+                    android:layout_toLeftOf="@id/eighth_imgid">
 
                     <TextView
                         android:id="@id/babysize_title"
@@ -524,6 +485,8 @@
                         android:ellipsize="end"
                         android:singleLine="true"
                         android:text="دليل حجم الطفل: حبة الأرز"
+                        android:layout_alignParentRight="true"
+
                         android:textColor="#ff5a5a5a"
                         android:textSize="16.0sp" />
 
@@ -532,6 +495,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/babysize_title"
+                        android:layout_alignParentRight="true"
+
                         android:ellipsize="end"
                         android:singleLine="true"
                         android:text="0.28 غرام و 0.3"
@@ -543,7 +508,7 @@
                     android:id="@id/disclosuretriangle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/discloure" />
             </RelativeLayout>
@@ -560,7 +525,7 @@
                     android:id="@id/nineth_imgid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
                     android:gravity="center"
@@ -572,8 +537,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
-                    android:layout_toLeftOf="@id/disclosuretriangle"
-                    android:layout_toRightOf="@id/nineth_imgid"
+                    android:layout_toRightOf="@id/disclosuretriangle"
+                    android:layout_toLeftOf="@id/nineth_imgid"
                     android:stretchColumns="*">
 
                     <TableRow
@@ -591,6 +556,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:ellipsize="end"
+                                android:layout_alignParentRight="true"
+
                                 android:singleLine="true"
                                 android:text="وزني"
                                 android:textColor="#ff5a5a5a"
@@ -603,37 +570,7 @@
                                 android:layout_below="@id/myweight_title1"
                                 android:ellipsize="end"
                                 android:singleLine="true"
-                                android:text="أدخلي وزنكي"
-                                android:textColor="#ff5dcbda"
-                                android:textSize="14.0sp" />
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:id="@id/weightSecond"
-                            android:layout_width="0.0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.5"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@id/myweight_title2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:ellipsize="end"
-                                android:singleLine="true"
-                                android:text="وزني"
-                                android:textColor="#ff5a5a5a"
-                                android:textSize="16.0sp" />
-
-                            <TextView
-                                android:id="@id/myweight_desc2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/myweight_title2"
-                                android:drawablePadding="15.0dip"
-                                android:drawableRight="@drawable/up_arrow_blue"
-                                android:ellipsize="end"
-                                android:singleLine="true"
+                                android:layout_alignParentRight="true"
                                 android:text="أدخلي وزنكي"
                                 android:textColor="#ff5dcbda"
                                 android:textSize="14.0sp" />
@@ -645,7 +582,7 @@
                     android:id="@id/disclosuretriangle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/discloure" />
             </RelativeLayout>
@@ -662,7 +599,7 @@
                     android:id="@id/tenth_imgid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
                     android:background="@drawable/today_appointment"
@@ -676,8 +613,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
-                    android:layout_toLeftOf="@id/disclosuretriangle"
-                    android:layout_toRightOf="@id/tenth_imgid">
+                    android:layout_toRightOf="@id/disclosuretriangle"
+                    android:layout_toLeftOf="@id/tenth_imgid">
 
                     <TextView
                         android:id="@id/appt_title"
@@ -687,6 +624,8 @@
                         android:singleLine="true"
                         android:text="مواعيد"
                         android:textColor="#ff5a5a5a"
+                        android:layout_alignParentRight="true"
+
                         android:textSize="16.0sp" />
 
                     <TextView
@@ -697,6 +636,8 @@
                         android:ellipsize="end"
                         android:singleLine="true"
                         android:text="أدخلي مواعيدك"
+                        android:layout_alignParentRight="true"
+
                         android:textColor="#ff5dcbda"
                         android:textSize="14.0sp" />
                 </RelativeLayout>
@@ -705,7 +646,7 @@
                     android:id="@id/disclosuretriangle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/discloure" />
             </RelativeLayout>
@@ -722,7 +663,7 @@
                     android:id="@id/eleventh_imgid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
                     android:gravity="center"
@@ -734,8 +675,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
-                    android:layout_toLeftOf="@id/disclosuretriangle"
-                    android:layout_toRightOf="@id/eleventh_imgid">
+                    android:layout_toRightOf="@id/disclosuretriangle"
+                    android:layout_toLeftOf="@id/eleventh_imgid">
 
                     <TextView
                         android:id="@id/todo_title"
@@ -745,6 +686,8 @@
                         android:singleLine="true"
                         android:text="لا توجد مهام محددة"
                         android:textColor="#ff5a5a5a"
+                        android:layout_alignParentRight="true"
+
                         android:textSize="16.0sp" />
 
                     <TextView
@@ -753,6 +696,8 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/todo_title"
                         android:ellipsize="end"
+                        android:layout_alignParentRight="true"
+
                         android:singleLine="true"
                         android:text="إختاري المهام للقيام بها هنا"
                         android:textColor="#ff5dcbda"
@@ -763,63 +708,7 @@
                     android:id="@id/disclosuretriangle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/discloure" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/twelvethLayout"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/eleventhLayout"
-                android:background="@drawable/square"
-                android:padding="5.0dip">
-
-                <ImageView
-                    android:id="@id/twelveth_imgid"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:layout_margin="5.0dip"
-                    android:src="@drawable/week" />
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_margin="5.0dip"
-                    android:layout_toLeftOf="@id/disclosuretriangle"
-                    android:layout_toRightOf="@id/twelveth_imgid">
-
-                    <TextView
-                        android:id="@id/month_wise_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:ellipsize="end"
-                        android:singleLine="true"
-                        android:text="الشهر الثاني من الحمل"
-                        android:textColor="#ff5a5a5a"
-                        android:textSize="16.0sp" />
-
-                    <TextView
-                        android:id="@id/month_wise_desc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/month_wise_title"
-                        android:ellipsize="end"
-                        android:singleLine="true"
-                        android:text="33 أسبوعا و خمست أيام تبقت"
-                        android:textColor="#ff5dcbda"
-                        android:textSize="14.0sp" />
-                </RelativeLayout>
-
-                <ImageView
-                    android:id="@id/disclosuretriangle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/discloure" />
             </RelativeLayout>
@@ -828,7 +717,7 @@
                 android:id="@id/thirteenthLayout"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/twelvethLayout"
+                android:layout_below="@id/eleventhLayout"
                 android:background="@drawable/square"
                 android:padding="5.0dip">
 
@@ -836,7 +725,7 @@
                     android:id="@id/thirteenth_imgid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
                     android:gravity="center"
@@ -848,8 +737,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
-                    android:layout_toLeftOf="@id/disclosuretriangle"
-                    android:layout_toRightOf="@id/thirteenth_imgid">
+                    android:layout_toRightOf="@id/disclosuretriangle"
+                    android:layout_toLeftOf="@id/thirteenth_imgid">
 
                     <LinearLayout
                         android:id="@id/babyLinear"
@@ -866,6 +755,8 @@
                             android:singleLine="true"
                             android:text="@string/allBoysNames"
                             android:textColor="#ff5a5a5a"
+                            android:layout_alignParentRight="true"
+
                             android:textSize="16.0sp" />
 
                         <TextView
@@ -875,6 +766,8 @@
                             android:layout_marginLeft="5.0dip"
                             android:layout_weight="1.0"
                             android:ellipsize="end"
+                            android:layout_alignParentRight="true"
+
                             android:singleLine="true"
                             android:text="@string/allGirlsNames"
                             android:textColor="#ff5a5a5a"
@@ -888,15 +781,7 @@
                         android:layout_below="@id/babyLinear"
                         android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@id/babyNames_desc"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ellipsize="end"
-                            android:singleLine="true"
-                            android:text="@string/selectYourNamesHere"
-                            android:textColor="#ff5dcbda"
-                            android:textSize="14.0sp" />
+
 
                         <TextView
                             android:id="@id/babyBoyFavNames_title"
@@ -904,6 +789,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1.0"
                             android:ellipsize="end"
+                            android:layout_alignParentRight="true"
+
                             android:singleLine="true"
                             android:text="إسم ذكر"
                             android:textColor="#ff5dcbda"
@@ -915,6 +802,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1.0"
                             android:ellipsize="end"
+                            android:layout_alignParentRight="true"
+
                             android:singleLine="true"
                             android:text="إسم بنت"
                             android:textColor="#ff5dcbda"
@@ -926,7 +815,7 @@
                     android:id="@id/disclosuretriangle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/discloure" />
             </RelativeLayout>
@@ -943,7 +832,7 @@
                     android:id="@id/forteenth_imgid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
                     android:gravity="center"
@@ -955,14 +844,16 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
-                    android:layout_toLeftOf="@id/disclosuretriangle"
-                    android:layout_toRightOf="@id/forteenth_imgid">
+                    android:layout_toRightOf="@id/disclosuretriangle"
+                    android:layout_toLeftOf="@id/forteenth_imgid">
 
                     <TextView
                         android:id="@id/shopping_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
+                        android:layout_alignParentRight="true"
+                        android:text="التسوق"
                         android:singleLine="true"
                         android:textColor="#ff5a5a5a"
                         android:textSize="16.0sp" />
@@ -974,6 +865,8 @@
                         android:layout_below="@id/shopping_title"
                         android:ellipsize="end"
                         android:singleLine="true"
+                        android:layout_alignParentRight="true"
+                        android:text="ملابس الرضيع"
                         android:textColor="#ff5dcbda"
                         android:textSize="14.0sp" />
                 </RelativeLayout>
@@ -982,7 +875,7 @@
                     android:id="@id/disclosuretriangle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/discloure" />
             </RelativeLayout>
@@ -999,7 +892,7 @@
                     android:id="@id/fifteenth_imgid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
                     android:gravity="center"
@@ -1011,14 +904,16 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
-                    android:layout_toLeftOf="@id/disclosuretriangle"
-                    android:layout_toRightOf="@id/fifteenth_imgid">
+                    android:layout_toRightOf="@id/disclosuretriangle"
+                    android:layout_toLeftOf="@id/fifteenth_imgid">
 
                     <TextView
                         android:id="@id/contacts_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
+                        android:layout_alignParentRight="true"
+
                         android:singleLine="true"
                         android:text="@string/importantPhoneNumbers"
                         android:textColor="#ff5a5a5a"
@@ -1030,6 +925,8 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/contacts_title"
                         android:ellipsize="end"
+                        android:layout_alignParentRight="true"
+
                         android:singleLine="true"
                         android:text="@string/selectNumbersHere"
                         android:textColor="#ff5dcbda"
@@ -1040,7 +937,7 @@
                     android:id="@id/disclosuretriangle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/discloure" />
             </RelativeLayout>
@@ -1057,7 +954,7 @@
                     android:id="@id/sixteenth_imgid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
                     android:gravity="center"
@@ -1069,8 +966,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
-                    android:layout_toLeftOf="@id/disclosuretriangle"
-                    android:layout_toRightOf="@id/sixteenth_imgid">
+                    android:layout_toRightOf="@id/disclosuretriangle"
+                    android:layout_toLeftOf="@id/sixteenth_imgid">
 
                     <TextView
                         android:id="@id/aboutus_title"
@@ -1080,6 +977,8 @@
                         android:singleLine="true"
                         android:text="@string/aboutUsAndMore"
                         android:textColor="#ff5a5a5a"
+                        android:layout_alignParentRight="true"
+
                         android:textSize="16.0sp" />
 
                     <TextView
@@ -1088,6 +987,8 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/aboutus_title"
                         android:ellipsize="end"
+                        android:layout_alignParentRight="true"
+
                         android:singleLine="true"
                         android:text="@string/faqRateAppOtherApps"
                         android:textColor="#ff5dcbda"
@@ -1098,30 +999,12 @@
                     android:id="@id/disclosuretriangle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/discloure" />
             </RelativeLayout>
 
-            <RelativeLayout
-                android:id="@id/seventeenthLayout"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/sixteenthLayout">
 
-                <TabWidget
-                    android:id="@android:id/tabs"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginTop="12.0dip"
-                    android:layout_weight="0.0"
-                    android:background="@drawable/square"
-                    android:orientation="horizontal"
-                    android:showDividers="end"
-                    android:tabStripEnabled="false"
-                    android:visibility="visible" />
-            </RelativeLayout>
 
         </RelativeLayout>
     </ScrollView>

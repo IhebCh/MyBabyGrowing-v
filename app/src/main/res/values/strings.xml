@@ -753,5 +753,6 @@ Please tell us what you don't like about the App, so we can help."</string>
     <string name="title_activity_tab_host">TabHost</string>
     <string name="plusScreenTitle">المزيد</string>
     <string name="LoginSignup">التسجيل أو الدخول</string>
+    <string name="title_activity_baby_names">BabyNames</string>
 
 </resources>

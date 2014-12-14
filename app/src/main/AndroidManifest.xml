@@ -6,8 +6,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        >
+        android:theme="@style/AppTheme" >
         <activity
             android:name="co.hygitech.mybabygrowing.Splash"
             android:label="@string/app_name"
@@ -60,8 +59,11 @@
         <activity
             android:name="co.hygitech.mybabygrowing.ConnecterEnregistrer"
             android:label="@string/title_activity_connecter_enregistrer"
-            android:screenOrientation="portrait"
-            >
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="co.hygitech.mybabygrowing.BabyNames"
+            android:label="@string/title_activity_baby_names" >
         </activity>
     </application>
 

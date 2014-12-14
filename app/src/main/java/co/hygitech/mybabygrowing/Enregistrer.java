@@ -38,6 +38,7 @@ public class Enregistrer extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
     public void next(View v){
         Intent i=new Intent(Enregistrer.this,TabsActivity.class);
         startActivity(i);

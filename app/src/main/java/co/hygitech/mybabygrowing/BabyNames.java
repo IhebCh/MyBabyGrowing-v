@@ -1,29 +1,23 @@
 package co.hygitech.mybabygrowing;
 
-import android.app.Activity;
-import android.content.res.Configuration;
+import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import java.util.Locale;
 
-
-public class Today extends Activity {
+public class BabyNames extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-        setContentView(R.layout.activity_today);
+        setContentView(R.layout.activity_baby_names);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_today, menu);
+        getMenuInflater().inflate(R.menu.menu_baby_names, menu);
         return true;
     }
 

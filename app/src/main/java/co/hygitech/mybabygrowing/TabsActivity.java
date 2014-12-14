@@ -40,10 +40,10 @@ public class TabsActivity extends TabActivity {
     }
 */
     private void setTabs() {
-        addTab("today", co.hygitech.mybabygrowing.R.drawable.tab1_background, Today.class);
-        addTab("baby", co.hygitech.mybabygrowing.R.drawable.tab2_background, Baby.class);
-        addTab("mom", co.hygitech.mybabygrowing.R.drawable.tab3_background, Mere.class);
-        addTab("more", co.hygitech.mybabygrowing.R.drawable.tab4_background, Plus.class);
+        addTab("", co.hygitech.mybabygrowing.R.drawable.tab1_background, Today.class);
+        addTab("", co.hygitech.mybabygrowing.R.drawable.tab2_background, Baby.class);
+        addTab("", co.hygitech.mybabygrowing.R.drawable.tab3_background, Mere.class);
+        addTab("", co.hygitech.mybabygrowing.R.drawable.tab4_background, Plus.class);
         tabHost.setCurrentTab(0);
     }
 
@@ -51,10 +51,13 @@ public class TabsActivity extends TabActivity {
         Intent intent = new Intent(this, c);
         TabHost.TabSpec spec = tabHost.newTabSpec("tab" + labelId);
         View tabIndicator = LayoutInflater.from(this).inflate(co.hygitech.mybabygrowing.R.layout.tab_indicator, tabWidget, false);
-        TextView title = (TextView) tabIndicator.findViewById(co.hygitech.mybabygrowing.R.id.title);
+        final TextView title = (TextView) tabIndicator.findViewById(co.hygitech.mybabygrowing.R.id.title);
         title.setText(labelId);
+
         ImageView icon = (ImageView) tabIndicator.findViewById(co.hygitech.mybabygrowing.R.id.icon);
         icon.setImageResource(drawableId);
+        icon.setPadding(0,-10,0,10);
+
         spec.setIndicator(tabIndicator);
         spec.setContent(intent);
         tabHost.addTab(spec);
