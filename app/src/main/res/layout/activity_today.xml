@@ -4,6 +4,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical">
 
+
     <ImageView
         android:id="@id/backImage"
         android:layout_width="fill_parent"
@@ -125,27 +126,9 @@
                         android:textColor="#ff5a5a5a"
                         android:textSize="16.0sp" />
 
-                    <TextView
-                        android:id="@id/weekText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBaseline="@id/weekCount"
-                        android:layout_toRightOf="@id/weekCount"
-                        android:paddingLeft="2.0dip"
-                        android:text="@string/week"
-                        android:textColor="#ff5a5a5a"
-                        android:textSize="16.0sp" />
 
-                    <TextView
-                        android:id="@+id/weekCount"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:gravity="bottom"
-                        android:paddingLeft="2.0dip"
-                        android:text="1"
-                        android:textColor="#ff5a5a5a"
-                        android:textSize="36.0sp" />
+
+
 
                     <TextView
                         android:id="@+id/daysCount"
@@ -451,73 +434,13 @@
                 android:layout_below="@id/sixthLayout"
                 android:orientation="vertical"/>
 
-            <RelativeLayout
-                android:id="@id/eighthLayout"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/sixthLayout"
-                android:background="@drawable/square"
-                android:padding="5.0dip">
 
-                <ImageView
-                    android:id="@id/eighth_imgid"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_margin="5.0dip"
-                    android:gravity="center"
-                    android:src="@drawable/week"
-                    android:textColor="#ffffffff" />
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_margin="5.0dip"
-                    android:layout_toRightOf="@id/disclosuretriangle"
-                    android:layout_toLeftOf="@id/eighth_imgid">
-
-                    <TextView
-                        android:id="@id/babysize_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:ellipsize="end"
-                        android:singleLine="true"
-                        android:text="دليل حجم الطفل: حبة الأرز"
-                        android:layout_alignParentRight="true"
-
-                        android:textColor="#ff5a5a5a"
-                        android:textSize="16.0sp" />
-
-                    <TextView
-                        android:id="@id/babysize_desc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/babysize_title"
-                        android:layout_alignParentRight="true"
-
-                        android:ellipsize="end"
-                        android:singleLine="true"
-                        android:text="0.28 غرام و 0.3"
-                        android:textColor="#ff5dcbda"
-                        android:textSize="14.0sp" />
-                </RelativeLayout>
-
-                <ImageView
-                    android:id="@id/disclosuretriangle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/discloure" />
-            </RelativeLayout>
 
             <RelativeLayout
                 android:id="@id/ninethLayout"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/eighthLayout"
+                android:layout_below="@id/sixthLayout"
                 android:background="@drawable/square"
                 android:padding="5.0dip">
 

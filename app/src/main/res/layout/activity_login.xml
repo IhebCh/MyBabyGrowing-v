@@ -46,9 +46,6 @@
         android:layout_below="@id/topLayout"
         android:orientation="vertical">
 
-
-
-
         <RelativeLayout
             android:id="@id/logintab"
             android:layout_width="fill_parent"

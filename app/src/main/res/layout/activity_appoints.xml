@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/all_bg_blur">
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/phone_top_bar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/top_bar_background">
+
+        <Button
+            android:id="@id/cancelBtn"
+            android:layout_width="@dimen/ph_top_label_width_small"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/phone_top_bar_txt_margin5"
+            android:background="@android:color/transparent"
+            android:ellipsize="middle"
+            android:paddingBottom="@dimen/padding_10"
+            android:paddingLeft="@dimen/phone_top_bar_txt_padding5"
+            android:paddingRight="@dimen/phone_top_bar_txt_padding5"
+            android:paddingTop="@dimen/padding_10"
+            android:singleLine="true"
+            android:text="إلغاء"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/phone_top_bar_txt_size" />
+
+        <TextView
+            android:id="@id/topHeading"
+            android:layout_width="@dimen/phone_heading_width_big"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="إضافة مواعيد"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/heading_phone" />
+
+        <Button
+            android:id="@id/saveBtn"
+            android:layout_width="@dimen/ph_top_label_width_small"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/phone_top_bar_txt_margin5"
+            android:background="@android:color/transparent"
+            android:ellipsize="middle"
+            android:paddingBottom="@dimen/padding_10"
+            android:paddingLeft="@dimen/phone_top_bar_txt_padding5"
+            android:paddingRight="@dimen/phone_top_bar_txt_padding5"
+            android:paddingTop="@dimen/padding_10"
+            android:singleLine="true"
+            android:text="حفظ"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/phone_top_bar_txt_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@id/scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topLayout">
+
+        <RelativeLayout
+            android:id="@id/parentLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@id/firstAddAppointmentLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secondSettingsLayout"
+                android:background="@drawable/square">
+
+                <TextView
+                    android:id="@id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20.0dip"
+                    android:text="الإسم"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#ff5a5a5a"
+                    android:textSize="22.0sp" />
+
+                <EditText
+                    android:id="@id/nameEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:background="@null"
+                    android:layout_marginLeft="20dp"
+                    android:hint="أكتب هنا"
+                    android:inputType="textCapSentences"
+                    android:maxLength="15"
+                    android:singleLine="true"
+                    android:textColor="#ff5dcbda"
+                    android:textSize="22.0sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/secondAddAppointmentLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstAddAppointmentLayout"
+                android:background="@drawable/square">
+
+                <TextView
+                    android:id="@id/profession"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20.0dip"
+                    android:text="المهنة"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#ff5a5a5a"
+                    android:textSize="22.0sp" />
+
+
+
+                <ImageView
+                    android:id="@id/disclosuretriangle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10.0dip"
+                    android:src="@drawable/discloure" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/thirdAddAppointmentLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secondAddAppointmentLayout"
+                android:background="@drawable/square">
+
+                <TextView
+                    android:id="@id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20.0dip"
+                    android:text="التاريخ"
+                    android:textColor="#ff5a5a5a"
+                    android:layout_alignParentRight="true"
+                    android:textSize="22.0sp" />
+
+                <TextView
+                    android:id="@id/dateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="160.0dip"
+                    android:textColor="#ff5dcbda"
+                    android:textSize="22.0sp" />
+
+                <ImageView
+                    android:id="@id/disclosuretriangle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="10.0dip"
+                    android:src="@drawable/discloure" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/fourthAddAppointmentLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/thirdAddAppointmentLayout"
+                android:background="@drawable/square">
+
+                <TextView
+                    android:id="@id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20.0dip"
+                    android:text="الوقت"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#ff5a5a5a"
+                    android:textSize="22.0sp" />
+
+                <TextView
+                    android:id="@id/timeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="160.0dip"
+                    android:textColor="#ff5dcbda"
+                    android:textSize="22.0sp" />
+
+                <ImageView
+                    android:id="@id/disclosuretriangle3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10.0dip"
+                    android:src="@drawable/discloure" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/fifthAddAppointmentLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fourthAddAppointmentLayout"
+                android:background="@drawable/square">
+
+                <TextView
+                    android:id="@id/myWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20.0dip"
+                    android:layout_alignParentRight="true"
+                    android:text="وزني"
+                    android:textColor="#ff5a5a5a"
+                    android:textSize="22.0sp" />
+
+                <TextView
+                    android:id="@id/myWeightText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="160.0dip"
+                    android:textColor="#ff5dcbda"
+                    android:textSize="22.0sp" />
+
+                <ImageView
+                    android:id="@id/disclosuretriangle4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="10.0dip"
+                    android:src="@drawable/discloure" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@id/seventhAddAppointmentLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fifthAddAppointmentLayout"
+                android:background="@drawable/square">
+
+                <TextView
+                    android:id="@id/babysHeart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20.0dip"
+                    android:layout_alignParentRight="true"
+                    android:text="قلب الطفل"
+                    android:textColor="#ff5a5a5a"
+                    android:textSize="22.0sp" />
+
+                <TextView
+                    android:id="@id/babysHeartTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="160.0dip"
+                    android:textColor="#ff5dcbda"
+                    android:textSize="22.0sp" />
+
+                <ImageView
+                    android:id="@id/disclosuretriangle6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10.0dip"
+                    android:src="@drawable/discloure" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/eighthAddAppointmentLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seventhAddAppointmentLayout"
+                android:background="@drawable/square">
+
+                <TextView
+                    android:id="@id/sync"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="20.0dip"
+                    android:text="التزامن مع الرزنامة"
+                    android:textColor="#ff5a5a5a"
+                    android:textSize="22.0sp" />
+
+                <ToggleButton
+                    android:id="@id/syncSwitch"
+                    android:layout_width="100.0dip"
+                    android:layout_height="41.0dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10.0dip"
+                    android:background="@drawable/switchno"
+                    android:textOff=""
+                    android:textOn="" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/bottomLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eighthAddAppointmentLayout"
+                android:background="#ffffffff"
+                android:padding="15.0dip">
+
+                <FrameLayout
+                    android:id="@id/notesEditTextLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ff5dcbda"
+                    android:padding="2.0dip">
+
+                    <EditText
+                        android:id="@id/notesEditText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffffff"
+                        android:gravity="top|left|center"
+                        android:hint="إضافاتك هنا ..."
+                        android:lines="5"
+                        android:paddingLeft="10.0dip"
+                        android:paddingRight="20.0dip"
+                        android:paddingTop="10.0dip"
+                        android:textColor="#ff5a5a5a" />
+
+                    <Button
+                        android:id="@id/clearTxtBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|top|center"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_marginTop="12.0dip"
+                        android:background="@android:color/transparent"
+                        android:text="X" />
+                </FrameLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,13 +1,16 @@
 package co.hygitech.mybabygrowing;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 
 public class Plus extends Activity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,4 +43,17 @@ public class Plus extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+    public void babyName(View v){
+        Intent i = new Intent(Plus.this,babyName.class);
+        startActivity(i);
+    }
+    public void phone(View v){
+        Intent i = new Intent(Plus.this,contact.class);
+        startActivity(i);
+    }
+    public void setting(View v){
+        Intent i = new Intent(Plus.this,setting.class);
+        startActivity(i);
+    }
+
 }

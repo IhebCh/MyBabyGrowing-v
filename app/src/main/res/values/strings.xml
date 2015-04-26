@@ -754,5 +754,16 @@ Please tell us what you don't like about the App, so we can help."</string>
     <string name="plusScreenTitle">المزيد</string>
     <string name="LoginSignup">التسجيل أو الدخول</string>
     <string name="title_activity_baby_names">BabyNames</string>
+    <string name="title_activity_appointements">appointements</string>
+    <string name="title_activity_appoints">appoints</string>
+    <string name="title_activity_baby_name">babyName</string>
+    <string name="title_activity_contact">contact</string>
+    <string name="title_activity_guide">Guide</string>
+    <string name="title_activity_question">question</string>
+    <string name="title_activity_setting">setting</string>
+    <string name="title_activity_weight">weight</string>
+    <string name="question1">متى يمكنني معرفة جنس الجنين؟</string>
+    <string name="question2">ماذا يجب أن أتناول في هذا الوقت؟</string>
+    <string name="question3">كم يجب أن أمكث في المستشفى؟</string>
 
 </resources>

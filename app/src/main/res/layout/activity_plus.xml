@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
+    android:layout_height="fill_parent">
 
     <ImageView
         android:layout_width="fill_parent"
@@ -31,14 +30,14 @@
             android:background="@android:color/transparent" />
 
         <TextView
-            android:id="@id/topHeading"
+            android:id="@+id/headingTitle"
             android:layout_width="@dimen/phone_heading_width_big"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:ellipsize="end"
             android:gravity="center"
             android:singleLine="true"
-            android:text="@string/moreScreenTitle"
+            android:text="@string/plusScreenTitle"
             android:textColor="#ffffffff"
             android:textSize="@dimen/heading_phone" />
 
@@ -48,6 +47,7 @@
         android:id="@id/secondLayout"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_above="@id/bottomLayout"
         android:layout_below="@id/topLayout"
         android:layout_centerVertical="true"
         android:padding="5.0dip"
@@ -67,8 +67,9 @@
                 android:layout_marginBottom="0dp"
                 android:layout_marginLeft="20.0dip"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="0dp"
                 android:layout_weight="1.0"
+                android:onClick="setting"
                 android:background="@drawable/rounded"
                 android:gravity="center">
 
@@ -87,7 +88,8 @@
                     android:layout_centerHorizontal="true"
                     android:text="@string/setting"
                     android:textColor="#ff5dcbda"
-                    android:textSize="16.0sp" />
+                    android:textSize="16.0sp"
+                 />
 
             </RelativeLayout>
 
@@ -98,8 +100,9 @@
                 android:layout_marginBottom="0dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20.0dip"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="0dp"
                 android:layout_weight="1.0"
+                android:onClick="phone"
                 android:background="@drawable/rounded"
                 android:gravity="center">
 
@@ -118,7 +121,8 @@
                     android:layout_centerHorizontal="true"
                     android:text="@string/phone"
                     android:textColor="#ff5dcbda"
-                    android:textSize="16.0sp" />
+                    android:textSize="16.0sp"
+                    />
             </RelativeLayout>
         </TableRow>
 
@@ -148,9 +152,10 @@
                 android:layout_marginBottom="0dp"
                 android:layout_marginLeft="20.0dip"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="0dp"
                 android:layout_weight="1.0"
                 android:background="@drawable/rounded"
+                android:onClick="babyName"
                 android:gravity="center">
 
                 <ImageView
@@ -168,7 +173,8 @@
                     android:layout_centerHorizontal="true"
                     android:text="@string/baby_names"
                     android:textColor="#ff5dcbda"
-                    android:textSize="16.0sp" />
+                    android:textSize="16.0sp"
+                   />
             </RelativeLayout>
 
             <RelativeLayout
@@ -178,7 +184,7 @@
                 android:layout_marginBottom="0dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20.0dip"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="0dp"
                 android:layout_weight="1.0"
                 android:background="@drawable/rounded"
                 android:gravity="center">
@@ -204,18 +210,22 @@
 
     </TableLayout>
 
-    <TableRow
+    <RelativeLayout
+        android:id="@id/bottomLayout"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <TabWidget
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_span="2"
-            android:minHeight="100dp"
-           />
-    </TableRow>
-
-
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="12.0dip"
+            android:layout_weight="0.0"
+            android:background="@drawable/square"
+            android:orientation="horizontal"
+            android:showDividers="end"
+            android:tabStripEnabled="false"
+            android:visibility="invisible" />
+    </RelativeLayout>
 </RelativeLayout>

@@ -50,6 +50,7 @@
         android:layout_below="@id/topLayout"
         android:layout_centerVertical="true"
         android:padding="5.0dip"
+        android:layout_marginBottom="40dp"
         android:stretchColumns="0,1">
 
         <TableRow

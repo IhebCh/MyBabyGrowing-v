@@ -8,19 +8,19 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class Mere extends Activity {
+public class appointements extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mere);
+        setContentView(R.layout.activity_appointements);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_mere, menu);
+        getMenuInflater().inflate(R.menu.menu_appointements, menu);
         return true;
     }
 
@@ -38,23 +38,11 @@ public class Mere extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
-    public void guide(View v){
-        Intent i = new Intent(Mere.this,Guide.class);
+    public void question(View v){
+        Intent i=new Intent(appointements.this,question.class);
         startActivity(i);
     }
-
-    public void weight(View v){
-        Intent i = new Intent(Mere.this,weight.class);
-        startActivity(i);
-    }
-
-    public void myAppointement(View v){
-        Intent i = new Intent(Mere.this,appointements.class);
-        startActivity(i);
-    }
-
-    public void toDo(View v){
-        Intent i = new Intent(Mere.this,To_do.class);
-        startActivity(i);
+    public void appointement(View v){
+        Intent i =new Intent(appointements.this,appoints.class);
     }
 }

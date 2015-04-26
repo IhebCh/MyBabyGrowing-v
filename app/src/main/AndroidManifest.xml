@@ -63,7 +63,48 @@
         </activity>
         <activity
             android:name="co.hygitech.mybabygrowing.BabyNames"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_baby_names" >
+        </activity>
+        <activity
+            android:name="co.hygitech.mybabygrowing.appointements"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_appointements" >
+        </activity>
+        <activity
+            android:name="co.hygitech.mybabygrowing.appoints"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_appoints" >
+        </activity>
+        <activity
+            android:name="co.hygitech.mybabygrowing.babyName"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_baby_name" >
+        </activity>
+        <activity
+            android:name="co.hygitech.mybabygrowing.contact"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_contact" >
+        </activity>
+        <activity
+            android:name="co.hygitech.mybabygrowing.Guide"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_guide" >
+        </activity>
+        <activity
+            android:name="co.hygitech.mybabygrowing.question"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_question" >
+        </activity>
+        <activity
+            android:name="co.hygitech.mybabygrowing.setting"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_setting" >
+        </activity>
+        <activity
+            android:name="co.hygitech.mybabygrowing.weight"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_weight" >
         </activity>
     </application>
 

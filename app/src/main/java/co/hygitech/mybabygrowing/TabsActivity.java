@@ -56,7 +56,7 @@ public class TabsActivity extends TabActivity {
 
         ImageView icon = (ImageView) tabIndicator.findViewById(co.hygitech.mybabygrowing.R.id.icon);
         icon.setImageResource(drawableId);
-        icon.setPadding(0,-10,0,10);
+        icon.setPadding(0,0,0,10);
 
         spec.setIndicator(tabIndicator);
         spec.setContent(intent);
